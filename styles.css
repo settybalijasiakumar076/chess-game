@@ -1,0 +1,44 @@
+.chess-board {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  margin: auto;
+  border: 2px solid #333;
+}
+
+.chess-square {
+  width: 100%;
+  height: 100%;
+}
+
+.chess-square:nth-child(even) {
+  background-color: #eee;
+}
+
+.chess-square:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.piece {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+.piece:hover {
+  transform: scale(1.1);
+}
+
+@media (min-width: 600px) {
+  .chess-board {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 900px) {
+  .chess-board {
+    max-width: 1000px;
+  }
+}
